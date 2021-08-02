@@ -24,7 +24,7 @@ def books_table_update():
     #Push table to Google Big Query
 
     client = bigquery.Client()
-    project_id = 'sue-gcp-learning-env'
+    project_id = 'anthos-315008'
     table_id = 'Books.books_title_author'
     pandas_gbq.to_gbq(input_table, table_id, project_id=project_id, if_exists='append')
     
